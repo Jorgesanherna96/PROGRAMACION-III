@@ -1,2 +1,0 @@
-# PROGRAMACION-III
-te quiero
