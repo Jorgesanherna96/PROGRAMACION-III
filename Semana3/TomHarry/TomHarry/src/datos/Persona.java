@@ -5,8 +5,15 @@ public class Persona {
     private float peso;
     private float altura;
 
-public Persona(){}
 
+
+public Persona(){
+
+    this.nombre="desconocido";
+    this.peso=0.0f;
+    this.altura=0.0f;
+
+}
 public Persona(String nombre, float peso, float altura) {
 
     this.nombre = nombre;
@@ -47,6 +54,17 @@ public void setPeso(float peso){
 public void setAltura(float altura){
 
     this.altura=altura;
+
+}
+
+public float calcularIMC(){
+
+    if(altura<=0||peso <= 0){
+
+        return -1;
+    }
+    return peso/ (altura*altura);
+
 
 }
     
