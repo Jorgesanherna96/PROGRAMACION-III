@@ -3,8 +3,8 @@ package datos;
 public class Fruta {
 
         private String nombre;
-        private float PrecioKg;
-        private float CantidadKg;
+        private double PrecioKg;
+        private double CantidadKg;
         public static final double IVA=0.21;
       
       
@@ -13,6 +13,16 @@ public class Fruta {
             this.PrecioKg = precioKg;
             this.CantidadKg = cantidadKg;
         }
+
+        
+
+
+        public Fruta(String nombre, double precioKg) {
+            this.nombre = nombre;
+            PrecioKg = precioKg;
+        }
+
+
 
 
         public Fruta() {
@@ -25,12 +35,12 @@ public class Fruta {
         }
 
 
-        public float getPrecioKg() {
+        public double getPrecioKg() {
             return PrecioKg;
         }
 
 
-        public float getCantidadKg() {
+        public double getCantidadKg() {
             return CantidadKg;
         }
 
@@ -49,6 +59,16 @@ public class Fruta {
             CantidadKg = cantidadKg;
         }
 
+
+        public double getPrecioKgConIva(){
+
+            return PrecioKg*(1+IVA);
+        }
+        
+        public double CalcularPrecioTotal(){
+
+            return CantidadKg*getPrecioKgConIva();
+        }
         
 
         
