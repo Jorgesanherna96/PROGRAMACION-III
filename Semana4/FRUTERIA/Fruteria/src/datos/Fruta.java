@@ -8,7 +8,7 @@ public class Fruta {
         public static final double IVA=0.21;
       
       
-        public Fruta(String nombre, float precioKg, float cantidadKg) {
+        public Fruta(String nombre, double precioKg, double cantidadKg) {
             this.nombre = nombre;
             this.PrecioKg = precioKg;
             this.CantidadKg = cantidadKg;
@@ -50,12 +50,12 @@ public class Fruta {
         }
 
 
-        public void setPrecioKg(float precioKg) {
+        public void setPrecioKg(double precioKg) {
             PrecioKg = precioKg;
         }
 
 
-        public void setCantidadKg(float cantidadKg) {
+        public void setCantidadKg(double cantidadKg) {
             CantidadKg = cantidadKg;
         }
 
