@@ -5,7 +5,7 @@ public class Fruta {
         private String nombre;
         private double PrecioKg;
         private double CantidadKg;
-        public static final double IVA=0.21;
+        private static final  double IVA=0.21;
       
       
         public Fruta(String nombre, double precioKg, double cantidadKg) {
