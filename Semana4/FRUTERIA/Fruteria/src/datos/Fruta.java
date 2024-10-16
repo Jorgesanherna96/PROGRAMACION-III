@@ -19,7 +19,7 @@ public class Fruta {
 
         public Fruta(String nombre, double precioKg) {
             this.nombre = nombre;
-            PrecioKg = precioKg;
+            this.PrecioKg = precioKg;
         }
 
 
