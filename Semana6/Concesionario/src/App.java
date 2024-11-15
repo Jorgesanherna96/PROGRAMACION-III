@@ -11,12 +11,11 @@ public class App {
 
     public static void main (String[] args) throws Exception {
        
-        
         int opcion;
         do {
            System.out.println("\n--- MENU CRUD ---");
             System.out.println("1. Agregar Coche");
-            System.out.println("2. Eliminar Coche");
+            System.out.println("2.  Eliminar Coche");
             System.out.println("3. Modificar Coche");
             System.out.println("4. Listar Coches");
             System.out.println("5. Salir");
