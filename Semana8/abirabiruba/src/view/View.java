@@ -55,7 +55,7 @@ public class View {
         ArrayList<Partido> partidos = c.getPartidos();
 
         // Mostrar la cabecera
-        System.out.println(Partido.getCabeceraTabla());
+        System.out.println(P.getCabeartidoceraTabla());
         // Mostrar lineas de partido
         for (Partido p : partidos) {
             System.out.println(p.asTableRow());;

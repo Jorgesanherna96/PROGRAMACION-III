@@ -1,7 +1,9 @@
-package view;
+package view; 
 import controller.*;
 
-import java.util.Scanner;
+import java.util.*;             
+
+import model.*;
 
 public class View {
 
@@ -15,7 +17,7 @@ public void setController(Controller controller){
 
 public void mostrarMenu(){
     Scanner scanner =new Scanner(System.in);
-    
+    if(controller.CargarFacturas()){
     int opcion=0;
 do{
     System.out.println("MENU:");
@@ -32,13 +34,24 @@ do{
 
     switch(opcion){
         case 1: 
+
+        ValorMinimoFactura();
         
         
         break;
         case 2:
+        mostrarFacturas();
         
         break;
         case 3: 
+        String delimitador= ",";
+        if(Controller.exportarDelimitado(delimitador)){
+                System.out.println("Exportado correctamente");
+
+        }
+        else{
+            System.out.println("Jodienda");
+        }
         
         break;
         default: 
@@ -53,7 +66,43 @@ do{
 
 }while(opcion!=0);
 
+    }
+
+}
+
+public void mostrarFacturas(){
+
+    ArrayList<Factura> facturas= controller.getFacturas();
+
+    System.out.println(Controller.getCabeceratabla());
+
+    for(Factura factura:facturas){
+        System.out.println(Controller.getTabla(factura));
+    }
+
+
 
 
 }
+
+
+public void ValorMinimoFactura(){
+
+    Scanner scanner =new Scanner(System.in);
+
+    System.out.println("Introduzca el importe(double): ");
+    double importe=scanner.nextDouble();
+
+    List<String>Superiores=controller.FacturasSuperiores(importe);
+    System.out.println("Facturas superiores a "+importe+"€: ");
+
+    for(String superiores:Superiores){
+
+        System.out.println(superiores);
+
+    }
+   
+}
+
+
 }
