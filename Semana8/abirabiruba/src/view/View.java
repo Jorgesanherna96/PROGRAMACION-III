@@ -15,6 +15,7 @@ public class View {
         this.c = controller;
     }
 
+   
     public void showMainMenu() {
         
         boolean salir  = false;
