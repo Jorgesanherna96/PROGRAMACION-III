@@ -1,6 +1,7 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\LenguaLarga\\Downloads\\biblioteca11.jar"
+        "c:\\Users\\LenguaLarga\\Downloads\\biblioteca11.jar",
+     
     ]
 }
